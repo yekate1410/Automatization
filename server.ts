@@ -4,7 +4,11 @@ import { Telegraf } from "telegraf";
 import OpenAI from "openai";
 import Database from "better-sqlite3";
 import path from "path";
+import { fileURLToPath } from "url";
 import cors from "cors";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // --- Database Setup ---
 const db = new Database(path.join(process.cwd(), "autodrive.db"));
